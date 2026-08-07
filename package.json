@@ -3,7 +3,7 @@
   "displayName": "Work Shirt",
   "description": "A comfortable, dependable, and well-worn color theme.",
   "version": "3.0.0",
-  "icon": "images/logo.png",
+  "icon": "images/logo.jpg",
   "galleryBanner": {
     "color": "#262A31",
     "theme": "dark"
@@ -35,6 +35,7 @@
   ],
   "files": [
     "themes/**",
+    "images/**",
     "README.md",
     "LICENSE"
   ],
