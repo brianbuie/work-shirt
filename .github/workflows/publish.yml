@@ -34,29 +34,29 @@ jobs:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: pnpm run publish:vsce
 
-  publish-open-vsx:
-    name: Publish to Open VSX
-    runs-on: ubuntu-latest
+  # publish-open-vsx:
+  #   name: Publish to Open VSX
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
+  #     - name: Setup pnpm
+  #       uses: pnpm/action-setup@v4
+  #       with:
+  #         version: 10
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: pnpm
+  #     - name: Setup Node.js
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: 24
+  #         cache: pnpm
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+  #     - name: Install dependencies
+  #       run: pnpm install --frozen-lockfile
 
-      - name: Publish extension
-        env:
-          OVSX_PAT: ${{ secrets.OVSX_PAT }}
-        run: pnpm run publish:ovsx
+  #     - name: Publish extension
+  #       env:
+  #         OVSX_PAT: ${{ secrets.OVSX_PAT }}
+  #       run: pnpm run publish:ovsx
