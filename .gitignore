@@ -1,4 +1,5 @@
 node_modules
+.*
+!.github
+!.vscode
 *.vsix
-demo
-.DS_STORE

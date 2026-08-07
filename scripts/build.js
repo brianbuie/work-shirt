@@ -5,35 +5,23 @@ import vscode from '../src/vscode.js';
 import warp from '../src/warp.js';
 import css from '../src/css.js';
 
-const name = 'stoked';
-const displayName = 'Stoked! 🤙';
-
-const builds = {
-  vscode: {
-    filename: name + '-vscode.json',
+const builds = [
+  {
+    filename: 'work-shirt-vscode.json',
     contents: JSON.stringify(vscode, null, 2),
   },
-  warp: {
-    filename: name + '-warp.yaml',
+  {
+    filename: 'work-shirt-warp.yaml',
     contents: YAML.stringify(warp),
   },
-  css: {
-    filename: name + '-colors.css',
+  {
+    filename: 'work-shirt.css',
     contents: css,
   },
-};
+];
 
-function save(dir, build) {
-  fs.writeFileSync(dir + '/' + build.filename, build.contents);
+for (const { filename, contents } of builds) {
+  fs.writeFileSync(`themes/${filename}`, contents);
 }
 
-// project directory
-Object.values(builds).forEach(build => save('themes', build));
-
-// Update Warp theme in home directory
-if (process.argv.includes('--everywhere')) {
-  save(`${os.homedir()}/.warp/themes`, builds.warp);
-}
-
-// 🎉
-console.log(`\x1b[3${Math.ceil(Math.random() * 10)}mBuilt: ${displayName}\x1b[0m`);
+console.log(`\x1b[3${Math.ceil(Math.random() * 10)}m[${new Date().toLocaleTimeString()}] Built!\x1b[0m`);

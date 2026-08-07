@@ -1,10 +1,15 @@
 {
   "$schema": "vscode://schemas/color-theme",
-  "name": "Drab Neon",
+  "name": "Work Shirt",
   "author": "Brian Buie",
   "semanticHighlighting": true,
   "semanticTokenColors": {
     "class.defaultLibrary": "#52BAB6",
+    "interface.defaultLibrary": "#52BAB6",
+    "type.defaultLibrary": "#52BAB6",
+    "typeParameter": {
+      "italic": true
+    },
     "parameter": {
       "italic": true
     },
@@ -270,7 +275,8 @@
         "support.type.property-name.json",
         "entity.other.attribute-name",
         "meta.property-name support.type.property-name",
-        "meta.structure.dictionary.json punctuation.support.type.property-name"
+        "meta.structure.dictionary.json punctuation.support.type.property-name",
+        "meta.definition.property"
       ],
       "settings": {
         "foreground": "#DE79B2"
@@ -297,6 +303,8 @@
         "string.template",
         "punctuation.definition.string.begin",
         "punctuation.definition.string.end",
+        "support.type.primitive",
+        "support.type.builtin",
         "meta.property-value.css",
         "keyword.other.unit"
       ],

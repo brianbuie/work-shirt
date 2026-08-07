@@ -1,28 +1,29 @@
 {
-  "name": "drab-neon-theme",
-  "displayName": "Drab Neon",
-  "description": "It's neat.",
-  "version": "2.0.1",
+  "name": "work-shirt",
+  "displayName": "Work Shirt",
+  "description": "A comfortable, dependable, and well-worn color theme.",
+  "version": "3.0.0",
   "icon": "images/logo.png",
   "galleryBanner": {
     "color": "#262A31",
     "theme": "dark"
   },
   "author": {
-    "name": "Brian Buie"
+    "name": "Brian Buie",
+    "email": "brian@buie.dev"
   },
-  "license": "MIT",
+  "license": "Unlicense",
   "publisher": "brianbuie",
   "repository": {
     "type": "git",
-    "url": "https://github.com/brianbuie/stoked-theme.git"
+    "url": "https://github.com/brianbuie/work-shirt.git"
   },
   "bugs": {
-    "url": "https://github.com/brianbuie/stoked-theme/issues",
+    "url": "https://github.com/brianbuie/work-shirt/issues",
     "email": "brian@buie.dev"
   },
   "engines": {
-    "vscode": "^1.73.0"
+    "vscode": "^1.90.0"
   },
   "type": "module",
   "categories": [
@@ -30,28 +31,35 @@
   ],
   "keywords": [
     "theme",
-    "dark",
-    "pink",
-    "purple"
+    "dark"
+  ],
+  "files": [
+    "themes/**",
+    "README.md",
+    "LICENSE"
   ],
   "contributes": {
     "themes": [
       {
-        "label": "Drab Neon Theme",
+        "label": "Work Shirt",
         "uiTheme": "vs-dark",
-        "path": "./themes/stoked-vscode.json"
+        "path": "./themes/work-shirt-vscode.json"
       }
     ]
   },
   "scripts": {
     "dev": "node --watch-path=./src --watch-path=./scripts scripts/build.js",
     "build": "node scripts/build.js",
-    "package": "vsce package"
+    "package": "vsce package --no-dependencies",
+    "publish:vsce": "vsce publish",
+    "publish:ovsx": "ovsx publish"
   },
   "devDependencies": {
-    "color": "^4.2.3",
-    "flat": "^5.0.2",
-    "yaml": "^2.1.3",
-    "@vscode/vsce": "^3.2.1"
-  }
+    "@vscode/vsce": "^3.6.2",
+    "color": "^5.0.3",
+    "flat": "^6.0.1",
+    "ovsx": "^0.10.6",
+    "yaml": "^2.9.0"
+  },
+  "packageManager": "pnpm@10.34.5"
 }

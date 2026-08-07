@@ -1,5 +1,5 @@
 import fs from 'fs';
-import flat from 'flat';
+import { flatten } from 'flat';
 import {
   red,
   yellow,
@@ -1036,10 +1036,14 @@ const semantic = {
   'namespace': i,
   'class': i,
   'class.defaultLibrary': builtIns,
+  'interface.defaultLibrary': builtIns,
+  'type.defaultLibrary': builtIns,
   'enum': i,
   'interface': i,
   'struct': i,
-  'typeParameter': i,
+  'typeParameter': {
+    italic: true,
+  },
   'type': i,
   'parameter': {
     italic: true,
@@ -1185,6 +1189,7 @@ const syntax = [
       'entity.other.attribute-name',
       'meta.property-name support.type.property-name',
       'meta.structure.dictionary.json punctuation.support.type.property-name',
+      'meta.definition.property',
     ],
     settings: {
       foreground: propDef,
@@ -1211,6 +1216,8 @@ const syntax = [
       'string.template',
       'punctuation.definition.string.begin',
       'punctuation.definition.string.end',
+      'support.type.primitive',
+      'support.type.builtin',
       // CSS Values
       'meta.property-value.css',
       'keyword.other.unit',
@@ -1607,7 +1614,7 @@ const theme = {
   author: author.name,
   semanticHighlighting: true,
   semanticTokenColors: hexYeah(semantic),
-  colors: flat(hexYeah(workbench)),
+  colors: flatten(hexYeah(workbench)),
   tokenColors: hexYeah(syntax),
 };
 
