@@ -4,7 +4,7 @@ const hexy = hexYeah(palette);
 
 const root = `:root {
 ${Object.entries(hexy)
-  .map(([name, hex]) => `\t--stoked-${name}: ${hex};`)
+  .map(([name, hex]) => `\t--shirt-${name}: ${hex};`)
   .join('\n')}
 }`;
 

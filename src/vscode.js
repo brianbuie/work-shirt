@@ -1,5 +1,5 @@
 import fs from 'fs';
-import flat from 'flat';
+import { flatten } from 'flat';
 import {
   red,
   yellow,
@@ -1607,7 +1607,7 @@ const theme = {
   author: author.name,
   semanticHighlighting: true,
   semanticTokenColors: hexYeah(semantic),
-  colors: flat(hexYeah(workbench)),
+  colors: flatten(hexYeah(workbench)),
   tokenColors: hexYeah(syntax),
 };
 
