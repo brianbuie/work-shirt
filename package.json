@@ -3,6 +3,24 @@
   "displayName": "Work Shirt",
   "description": "A comfortable, dependable, and well-worn color theme.",
   "version": "3.1.0",
+  "packageManager": "pnpm@10.34.5",
+  "scripts": {
+    "dev": "node --watch src/build.ts",
+    "build": "node src/build.ts",
+    "package": "vsce package --no-dependencies",
+    "publish:vsce": "vsce publish",
+    "publish:ovsx": "ovsx publish",
+    "postversion": "git push --follow-tags"
+  },
+  "devDependencies": {
+    "@brianbuie/node-kit": "^1.0.2",
+    "@types/node": "^26.2.0",
+    "@vscode/vsce": "^3.9.2",
+    "color": "^5.0.3",
+    "flat": "^6.0.1",
+    "typescript": "^7.0.2",
+    "yaml": "^2.9.0"
+  },
   "icon": "images/logo.jpg",
   "galleryBanner": {
     "color": "#262A31",
@@ -18,10 +36,6 @@
     "type": "git",
     "url": "https://github.com/brianbuie/work-shirt.git"
   },
-  "bugs": {
-    "url": "https://github.com/brianbuie/work-shirt/issues",
-    "email": "brian@buie.dev"
-  },
   "engines": {
     "vscode": "^1.90.0"
   },
@@ -29,33 +43,13 @@
   "categories": [
     "Themes"
   ],
-  "keywords": [
-    "theme",
-    "dark"
-  ],
   "contributes": {
     "themes": [
       {
         "label": "Work Shirt",
         "uiTheme": "vs-dark",
-        "path": "./themes/work-shirt-vscode.json"
+        "path": "./dist/work-shirt-vscode.json"
       }
     ]
-  },
-  "scripts": {
-    "dev": "node --watch-path=./src --watch-path=./scripts scripts/build.js",
-    "build": "node scripts/build.js",
-    "package": "vsce package --no-dependencies",
-    "publish:vsce": "vsce publish",
-    "publish:ovsx": "ovsx publish",
-    "postversion": "git push --follow-tags"
-  },
-  "devDependencies": {
-    "@vscode/vsce": "^3.6.2",
-    "color": "^5.0.3",
-    "flat": "^6.0.1",
-    "ovsx": "^0.10.6",
-    "yaml": "^2.9.0"
-  },
-  "packageManager": "pnpm@10.34.5"
+  }
 }

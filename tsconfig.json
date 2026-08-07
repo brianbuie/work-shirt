@@ -1,0 +1,3 @@
+{
+  "extends": "./node_modules/@brianbuie/node-kit/tsconfig.json"
+}
