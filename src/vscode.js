@@ -13,6 +13,7 @@ import {
   bg,
   white,
   comment,
+  subtle,
   primary,
   secondary,
   highlight,
@@ -1028,6 +1029,7 @@ const variables = white;
 const primitives = yellow;
 const params = white;
 const tags = green;
+const types = subtle;
 const separators = purple;
 const brackets = white;
 const cssConsts = orange;
@@ -1036,15 +1038,17 @@ const semantic = {
   'namespace': i,
   'class': i,
   'class.defaultLibrary': builtIns,
-  'interface.defaultLibrary': builtIns,
-  'type.defaultLibrary': builtIns,
+  'interface.defaultLibrary': types,
+  'type': types,
+  'type.declaration': white,
+  'interface': types,
+  'interface.declaration': white,
   'enum': i,
-  'interface': i,
   'struct': i,
   'typeParameter': {
+    foreground: types,
     italic: true,
   },
-  'type': i,
   'parameter': {
     italic: true,
   },
@@ -1216,8 +1220,6 @@ const syntax = [
       'string.template',
       'punctuation.definition.string.begin',
       'punctuation.definition.string.end',
-      'support.type.primitive',
-      'support.type.builtin',
       // CSS Values
       'meta.property-value.css',
       'keyword.other.unit',
@@ -1229,7 +1231,7 @@ const syntax = [
   {
     name: 'Classes',
     scope: [
-      'entity.name.type.class',
+      // 'entity.name.type.class',
       'entity.name.class',
       'entity.other.inherited-class',
       'variable.other.class',
@@ -1316,7 +1318,7 @@ const syntax = [
       'keyword.operator.other.powershell',
       'keyword.other.statement-separator.powershell',
       'meta.brace.round',
-      'meta.brace.square',
+      // 'meta.brace.square',
       'meta.brace.curly',
       'meta.function-call punctuation',
       'punctuation.definition.arguments.begin',
@@ -1339,25 +1341,6 @@ const syntax = [
       foreground: brackets,
     },
   },
-  // {
-  //   name: 'Variable interpolation operators',
-  //   scope: [
-  //     'meta.string-contents.quoted.double punctuation.definition.variable',
-  //     'punctuation.definition.interpolation.begin',
-  //     'punctuation.definition.interpolation.end',
-  //     'punctuation.definition.template-expression.begin',
-  //     'punctuation.definition.template-expression.end',
-  //     'punctuation.section.embedded.begin',
-  //     'punctuation.section.embedded.coffee',
-  //     'punctuation.section.embedded.end',
-  //     'punctuation.section.embedded.end source.php',
-  //     'punctuation.section.embedded.end source.ruby',
-  //     'punctuation.definition.variable.makefile',
-  //   ],
-  //   settings: {
-  //     foreground: builtIns,
-  //   },
-  // },
   {
     name: 'Comments',
     scope: [
@@ -1376,29 +1359,14 @@ const syntax = [
   {
     name: 'Types',
     scope: [
-      // 'entity.name.type',
-      'keyword.primitive-datatypes.swift',
-      'keyword.type.cs',
-      'meta.protocol-list.objc',
-      'meta.return-type.objc',
-      'source.go storage.type',
-      'source.groovy storage.type',
-      'source.java storage.type',
-      'source.powershell entity.other.attribute-name',
-      'storage.class.std.rust',
-      'storage.type.attribute.swift',
-      'storage.type.c',
-      'storage.type.core.rust',
-      'storage.type.cs',
-      'storage.type.groovy',
-      'storage.type.objc',
-      'storage.type.php',
-      'storage.type.haskell',
-      'storage.type.ocaml',
+      'support.type.primitive',
+      'support.type.builtin',
+      'meta.type.parameters',
+      'meta.return.type',
+      'meta.type.annotation',
     ],
     settings: {
-      fontStyle: 'italic',
-      foreground: purple,
+      foreground: types,
     },
   },
   {

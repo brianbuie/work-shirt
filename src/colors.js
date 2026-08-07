@@ -15,6 +15,7 @@ export const black = Color('black');
 export const bg = Color('#262a31');
 export const white = Color('#ABB2BF').mix(pink, 0.1);
 export const comment = bg.lighten(1.5).saturate(0.8);
+export const subtle = bg.lighten(2.2).mix(pink, 0.2);
 export const primary = pink;
 export const secondary = blue;
 export const highlight = primary.fade(0.95);

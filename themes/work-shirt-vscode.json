@@ -5,9 +5,13 @@
   "semanticHighlighting": true,
   "semanticTokenColors": {
     "class.defaultLibrary": "#52BAB6",
-    "interface.defaultLibrary": "#52BAB6",
-    "type.defaultLibrary": "#52BAB6",
+    "interface.defaultLibrary": "#90849F",
+    "type": "#90849F",
+    "type.declaration": "#B0ACBE",
+    "interface": "#90849F",
+    "interface.declaration": "#B0ACBE",
     "typeParameter": {
+      "foreground": "#90849F",
       "italic": true
     },
     "parameter": {
@@ -303,8 +307,6 @@
         "string.template",
         "punctuation.definition.string.begin",
         "punctuation.definition.string.end",
-        "support.type.primitive",
-        "support.type.builtin",
         "meta.property-value.css",
         "keyword.other.unit"
       ],
@@ -315,7 +317,6 @@
     {
       "name": "Classes",
       "scope": [
-        "entity.name.type.class",
         "entity.name.class",
         "entity.other.inherited-class",
         "variable.other.class",
@@ -400,7 +401,6 @@
         "keyword.operator.other.powershell",
         "keyword.other.statement-separator.powershell",
         "meta.brace.round",
-        "meta.brace.square",
         "meta.brace.curly",
         "meta.function-call punctuation",
         "punctuation.definition.arguments.begin",
@@ -441,28 +441,14 @@
     {
       "name": "Types",
       "scope": [
-        "keyword.primitive-datatypes.swift",
-        "keyword.type.cs",
-        "meta.protocol-list.objc",
-        "meta.return-type.objc",
-        "source.go storage.type",
-        "source.groovy storage.type",
-        "source.java storage.type",
-        "source.powershell entity.other.attribute-name",
-        "storage.class.std.rust",
-        "storage.type.attribute.swift",
-        "storage.type.c",
-        "storage.type.core.rust",
-        "storage.type.cs",
-        "storage.type.groovy",
-        "storage.type.objc",
-        "storage.type.php",
-        "storage.type.haskell",
-        "storage.type.ocaml"
+        "support.type.primitive",
+        "support.type.builtin",
+        "meta.type.parameters",
+        "meta.return.type",
+        "meta.type.annotation"
       ],
       "settings": {
-        "fontStyle": "italic",
-        "foreground": "#9872C3"
+        "foreground": "#90849F"
       }
     },
     {
