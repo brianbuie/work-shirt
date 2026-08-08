@@ -23,7 +23,7 @@ export function hexify(i: unknown): any {
   );
 }
 
-const outDir = cwd.dir("dist");
+const outDir = cwd.dir("themes");
 
 /**
  * VS Code
