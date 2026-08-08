@@ -133,11 +133,12 @@ export const syntax = [
     },
   },
   {
-    name: "JSON properties, HTML attributes, CSS properties",
+    name: "Key definitions, JSON properties, HTML attributes, CSS properties",
     scope: [
       "support.type.property-name",
       "entity.other.attribute-name",
       "meta.definition.property",
+      "meta.section.configblock constant.other.object.key", // bq-sqlx config block
     ],
     settings: {
       foreground: propDef,
@@ -147,7 +148,9 @@ export const syntax = [
     name: "Primitives (strings, numbers, boolean, null)",
     scope: [
       "constant",
-      "string",
+      // "string", This applies styles to "string.unquoted", which can sometimes override object key scopes. string.quoted and string.template below cover the other scopes.
+      "string.quoted",
+      "string.template",
       "punctuation.definition.string",
       "meta.property-value.css",
       "keyword.other.unit",
@@ -161,6 +164,16 @@ export const syntax = [
     scope: ["variable.language.this"],
     settings: {
       foreground: classes,
+    },
+  },
+  {
+    name: "Functions",
+    scope: [
+      "entity.name.function", // bq-sqlx js functions
+      "support.function", // bq-sqlx sql functions
+    ],
+    settings: {
+      foreground: functions,
     },
   },
   {

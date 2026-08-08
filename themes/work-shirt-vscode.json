@@ -252,11 +252,12 @@
       }
     },
     {
-      "name": "JSON properties, HTML attributes, CSS properties",
+      "name": "Key definitions, JSON properties, HTML attributes, CSS properties",
       "scope": [
         "support.type.property-name",
         "entity.other.attribute-name",
-        "meta.definition.property"
+        "meta.definition.property",
+        "meta.section.configblock constant.other.object.key"
       ],
       "settings": {
         "foreground": "#DE79B2"
@@ -266,7 +267,8 @@
       "name": "Primitives (strings, numbers, boolean, null)",
       "scope": [
         "constant",
-        "string",
+        "string.quoted",
+        "string.template",
         "punctuation.definition.string",
         "meta.property-value.css",
         "keyword.other.unit"
@@ -282,6 +284,16 @@
       ],
       "settings": {
         "foreground": "#DFA465"
+      }
+    },
+    {
+      "name": "Functions",
+      "scope": [
+        "entity.name.function",
+        "support.function"
+      ],
+      "settings": {
+        "foreground": "#5A9ED7"
       }
     },
     {
