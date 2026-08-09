@@ -2,7 +2,7 @@
   "name": "work-shirt",
   "displayName": "Work Shirt",
   "description": "A well-worn color theme built around semantic syntax highlighting, a limited palette, and a minimalist workbench.",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "packageManager": "pnpm@10.34.5",
   "scripts": {
     "dev": "node --watch src/build.ts",
