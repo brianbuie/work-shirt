@@ -1,6 +1,6 @@
 # Work Shirt
 
-A dependable, well-worn color theme built around semantic syntax highlighting, a limited palette, and a minimalist workbench.
+A well-worn color theme built around semantic syntax highlighting, a limited palette, and a minimalist workbench.
 
 Download on [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=BrianBuie.work-shirt)
 

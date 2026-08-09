@@ -1,7 +1,7 @@
 {
   "name": "work-shirt",
   "displayName": "Work Shirt",
-  "description": "A dependable, well-worn color theme built around semantic syntax highlighting, a limited palette, and a minimalist workbench.",
+  "description": "A well-worn color theme built around semantic syntax highlighting, a limited palette, and a minimalist workbench.",
   "version": "3.3.0",
   "packageManager": "pnpm@10.34.5",
   "scripts": {
