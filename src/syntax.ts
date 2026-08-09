@@ -9,7 +9,6 @@ import {
   pink,
   white,
   comment,
-  denim,
 } from "./palette.ts";
 
 // undefined placeholder
@@ -23,21 +22,16 @@ const propRef = white;
 const propDef = pink;
 const variables = white;
 const params = white;
-const types = denim;
 
 export const semantic = {
   namespace: i,
   class: classes,
   "class.defaultLibrary": builtIns,
-  "interface.defaultLibrary": types,
-  type: types,
-  "type.declaration": types,
-  interface: types,
-  "interface.declaration": types,
+  "interface.defaultLibrary": builtIns,
+  "type.defaultLibrary": builtIns,
   enum: classes,
   struct: classes,
   typeParameter: {
-    foreground: types,
     italic: true,
   },
   parameter: {
@@ -106,6 +100,8 @@ export const syntax = [
       "constant.regexp",
       "constant.other.date",
       "constant.other.timestamp",
+      "support.type.primitive",
+      "support.type.builtin",
     ],
     settings: {
       foreground: builtIns,
@@ -207,13 +203,6 @@ export const syntax = [
     settings: {
       foreground: comment,
       fontStyle: "italic",
-    },
-  },
-  {
-    name: "Types",
-    scope: ["support.type.primitive", "support.type.builtin"],
-    settings: {
-      foreground: types,
     },
   },
   {
@@ -352,16 +341,6 @@ export const syntax = [
     settings: {
       foreground: yellow,
       fontStyle: "italic",
-    },
-  },
-  {
-    name: "Code blocks",
-    scope: [
-      "fenced_code.block.language",
-      "markup.fenced_code.block.markdown punctuation.definition.markdown",
-    ],
-    settings: {
-      foreground: denim,
     },
   },
 ];

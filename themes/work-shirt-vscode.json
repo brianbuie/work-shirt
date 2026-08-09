@@ -6,15 +6,11 @@
   "semanticTokenColors": {
     "class": "#DFA465",
     "class.defaultLibrary": "#52BAB6",
-    "interface.defaultLibrary": "#6385B0",
-    "type": "#6385B0",
-    "type.declaration": "#6385B0",
-    "interface": "#6385B0",
-    "interface.declaration": "#6385B0",
+    "interface.defaultLibrary": "#52BAB6",
+    "type.defaultLibrary": "#52BAB6",
     "enum": "#DFA465",
     "struct": "#DFA465",
     "typeParameter": {
-      "foreground": "#6385B0",
       "italic": true
     },
     "parameter": {
@@ -217,7 +213,9 @@
         "constant.character.escape",
         "constant.regexp",
         "constant.other.date",
-        "constant.other.timestamp"
+        "constant.other.timestamp",
+        "support.type.primitive",
+        "support.type.builtin"
       ],
       "settings": {
         "foreground": "#52BAB6"
@@ -330,16 +328,6 @@
       "settings": {
         "foreground": "#546685",
         "fontStyle": "italic"
-      }
-    },
-    {
-      "name": "Types",
-      "scope": [
-        "support.type.primitive",
-        "support.type.builtin"
-      ],
-      "settings": {
-        "foreground": "#6385B0"
       }
     },
     {
@@ -508,16 +496,6 @@
       "settings": {
         "foreground": "#B7B767",
         "fontStyle": "italic"
-      }
-    },
-    {
-      "name": "Code blocks",
-      "scope": [
-        "fenced_code.block.language",
-        "markup.fenced_code.block.markdown punctuation.definition.markdown"
-      ],
-      "settings": {
-        "foreground": "#6385B0"
       }
     }
   ]
